@@ -55,8 +55,7 @@ Only the Jump Box VM and ELK VM machine can accept connections from the Internet
   - My Public IP
 
 Machines within the network can only be accessed by Jump Box VM.
-- Which machine did you allow to access your ELK VM? What was its IP address?
-  - Jumpbox IP 
+  - 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -83,7 +82,6 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- List the IP addresses of the machines you are monitoring
   - 10.0.0.5, 10.0.0.7, 10.0.0.10
 
 We have installed the following Beats on these machines:
