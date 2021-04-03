@@ -11,7 +11,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - _[Metricbeat](Ansible/metricbeat-playbook.yml)_
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -29,7 +29,7 @@ Load balancing ensures that the application will be highly efficient, flexible, 
 - What is the advantage of a jump box? The jump box is a secure computer that provides a gateway to the servers. 
   - The jump box provides a segregation layer for the network and only allows my machine to connect to the jumpbox which therefore reduces the attack surface area. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the system logs and system usage and services. The ELK server helps create visualizations for application and infrastructure monitoring. It also aids faster troubleshooting, and security analytics.
 - What does Filebeat watch for? 
   - Filebeat is an agent installed on the webservers to monitor; log files, or specified locations, collect log events and forward them to the Elasticsearch for indexing. It also montiors for SSH logins, system logs, and sudo commands
 - What does Metricbeat record? 
@@ -50,9 +50,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _Jump Box VM and ELK VM____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
+Only the Jump Box VM and ELK VM machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
 - Add whitelisted IP addresses
-  - My public IP
+  - My Public IP
 
 Machines within the network can only be accessed by Jump Box VM.
 - Which machine did you allow to access your ELK VM? What was its IP address?
@@ -63,7 +63,7 @@ A summary of the access policies in place can be found in the table below.
 | Name        | Publicly Accessible | Allowed IP Addresses    |
 |-------------|---------------------|-------------------------|
 | Jump Box VM | Yes                 | My Public IP        |
-| ELK VM      | Yes                 | Jumpbox IP, My public IP |
+| ELK VM      | Yes                 | 10.0.0.4, My Public IP |
 
 ### Elk Configuration
 
@@ -90,9 +90,8 @@ We have installed the following Beats on these machines:
 - Filebeats, Metricbeats
 
 These Beats allow us to collect the following information from each machine:
--  In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
-    - Filebeat is an agent installed on the webservers to monitor; log files, or specified locations, collect log events and forward them to the Elasticsearch for indexing. It also montiors for SSH logins, system logs, and sudo commands.
-    - Metricbeat is an agent installed on the webserves to collect metrics from the operating system such as CPU, RAM, network usage, and services running on the servers and ships them to the Elasticsearch.
+    - Filebeat collects; log files, or specified locations, collect log events and forward them to the Elasticsearch for indexing. It also montiors for SSH logins, system logs, and sudo commands.
+    - Metricbeat collects metrics from the operating system such as CPU, RAM, network usage, and services running on the servers and ships them to the Elasticsearch.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
