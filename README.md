@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![test](Diagrams/Virtualization-Diagram.png)
+![Diagram](Diagrams/Virtualization-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -31,7 +31,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Filebeat watch for? 
   - Filebeat is an agent installed on the webservers to monitor; log files, or specified locations, collect log events and forward them to the Elasticsearch for indexing. It also montiors for SSH logins, system logs, and sudo commands
 - What does Metricbeat record? 
-  - It is an agent installed on the webserves to collect metrics from the operaing system such as CPU, RAM, network usage, and services running on the servers and ships them to the Elasticsearch.
+  - It is an agent installed on the webserves to collect metrics from the operating system such as CPU, RAM, network usage, and services running on the servers and ships them to the Elasticsearch.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -78,7 +78,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![test](Diagrams/Docker-Output.PNG)
+![Screenshot](Diagrams/Docker-Output.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -90,8 +90,8 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 -  In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
-    - Filebeat
-    - Metricbeat
+    - Filebeat is an agent installed on the webservers to monitor; log files, or specified locations, collect log events and forward them to the Elasticsearch for indexing. It also montiors for SSH logins, system logs, and sudo commands.
+    - Metricbeat is an agent installed on the webserves to collect metrics from the operating system such as CPU, RAM, network usage, and services running on the servers and ships them to the Elasticsearch.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
