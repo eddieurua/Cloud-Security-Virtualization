@@ -6,7 +6,9 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _[My Playbook](Ansible/my-playbook.yml)_
+  - _[Install ELK](Ansible/install-elk.yml)_
+  - _[Filebeat](Ansible/filebeat-playbook.yml)_
+  - _[Metricbeat](Ansible/metricbeat-playbook.yml)_
 
 This document contains the following details:
 - Description of the Topologu
@@ -70,7 +72,6 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
   - Ansible helped with the configuration mamagement and application deployment across the different containers in the network. It helped make deployment fast/efficient across the project lifecycle. It also offered flexibility and consistency in deployment.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
   - Install docker.io
   - Installed the python module,
   - Installed the elk container and set the max memory to use at least 2GB of RAM
