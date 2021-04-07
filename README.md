@@ -99,9 +99,14 @@ SSH into the control node and follow the steps below:
 - Update the `/etc/ansible/hosts` file to include the webservers
 - Run the playbook, and navigate to `/etc/filebeat/` on the appropriate machines to check that the installation worked as expected.
 
+SSH into the control node and follow the steps below:
+- Copy the `/etc/ansible/files/metricbeat-config.yml` file to `/etc/metricbeat/metricbeat.yml`.
+- Update the `/etc/ansible/hosts` file to include the webservers
+- Run the playbook, and navigate to `/etc/metricbeat/` on the appropriate machines to check that the installation worked as expected.
+
 _Answer the following questions to fill in the blanks:_
 - Which file is the playbook? Where do you copy it?
-  - `/etc/filebeat-playbook.yml`
+  - `/etc/ansible/roles/filebeat-playbook.yml` and `/etc/ansible/roles/metricbeat-playbook.yml` 
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
   - `/etc/ansible/hosts` file would be edited to modify the groups to determine how the playbook will install the specific programs on the groups of IP addresses labeled in the file.
 - _Which URL do you navigate to in order to check that the ELK server is running? 
